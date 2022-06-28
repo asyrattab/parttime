@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 String user=username.getText().toString();
                 String pass=password.getText().toString();
                 String repass=repassword.getText().toString();
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
                 startActivity(intent);
             }
