@@ -30,12 +30,12 @@ public class DBHelper extends SQLiteOpenHelper {
     //insert data function
     public Boolean insertData(String username, String password){
         SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
+        ContentValues contentValues = new ContentValues();
 
-        values.put("username", username);
-        values.put("password", password);
+        contentValues.put("username", username);
+        contentValues.put("password", password);
 
-        long result = db.insert("users", null, values);
+        long result = db.insert("users", null, contentValues);
         if (result==-1) return false;
         else
             return true;
